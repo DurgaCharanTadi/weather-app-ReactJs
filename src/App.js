@@ -71,10 +71,10 @@ function App() {
             <li>Wind Speed: {weather.wind.speed}mph</li>
           </ul>
           <ul className="details_sheet_3">
-            <li>Sunrise: {weather.sys.sunrise}</li>
-            <li>Sunset: {weather.sys.sunset}</li>
-            <li>Latitute: {weather.coord.lat}</li>
-            <li>Longitude: {weather.coord.lon}</li>
+            <li>Pressure: {((weather.main.pressure)*0.0002953*100).toFixed(2)}Hg</li>
+            <li>Visibility: {((weather.visibility)*0.000621371).toFixed(2)} miles</li>
+            <li>Latitute: {weather.coord.lat}°{((weather.coord.lat < 0)?'S':'N')}</li>
+            <li>Longitude: {weather.coord.lon}°{((weather.coord.lon < 0)?'W':'E')}</li>
           </ul>
         </div>
         </div>
